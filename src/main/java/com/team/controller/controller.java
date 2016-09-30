@@ -4,8 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import static javax.swing.text.html.FormSubmitEvent.MethodType.POST;
-
 /**
  * Created by andrewdmo on 9/29/16.
  */
@@ -26,8 +24,12 @@ public class controller {
     }
 
     @RequestMapping(path = "/productdetail")
-    @RequestMapping(method=POST) ("/listencontroller")
+    public String productdetail(Model model) {
+        return "productdetail";
+    }
 
+
+    @RequestMapping("/listencontroller")
 
     public String apilistener () {
         return "listcontroller";
@@ -36,13 +38,5 @@ public class controller {
     }
 }
 
-@RequestMapping(method=POST) ("/listencontroller")
-
-
-public String apilistener () {
-    return "listcontroller";
-
-
-    }
 
 

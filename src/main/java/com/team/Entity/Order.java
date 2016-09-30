@@ -1,4 +1,4 @@
-package com.team.entity;
+package com.team.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -76,5 +76,12 @@ public class Order {
     public void setItemPic(ArrayList itemPic) {
         this.itemPic = itemPic;
     }
-    publi
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
 }
