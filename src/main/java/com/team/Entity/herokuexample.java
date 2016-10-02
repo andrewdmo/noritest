@@ -1,42 +1,38 @@
 package com.team.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 /**
- * Created by andrewdmo on 9/30/16.
+ * Created by andrewdmo on 10/1/16.
  */
 
-
 @Entity
-@Table(name = "giftorder")
-public class Order {
+//@Table(name = "herokuexample")
+public class herokuexample {
 
     @Id
     @GeneratedValue
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "name1")
     private String name1;
+
+    @Column(name = "name2")
     private String name2;
+
+    @Column(name = "itemNum")
     private String itemNum;
-    private ArrayList itemPic; //optional/separate object?
-    private Integer quantity; //optional/separate object?
 
-    //no argument constructors:
-    public Order() {
-    }
+    @Column(name = "EMAIL")
+    private ArrayList itemPic;
 
-    public Order(Integer id, String name1, String name2, String itemNum, ArrayList itemPic, Integer quantity) {
-        this.id = id;
-        this.name1 = name1;
-        this.name2 = name2;
-        this.itemNum = itemNum;
-        this.itemPic = itemPic;
-        this.quantity = quantity;
+    @Column(name = "ROLE")
+    private Integer quantity;
 
+
+    private herokuexample() {
     }
 
     public Integer getId() {
@@ -48,7 +44,7 @@ public class Order {
     }
 
     public String getName1() {
-        return getName1();
+        return name1;
     }
 
     public void setName1(String name1) {
@@ -87,3 +83,11 @@ public class Order {
         this.quantity = quantity;
     }
 }
+
+//    private Integer id;
+//
+//    private String name1;
+//    private String name2;
+//    private String itemNum;
+//    private ArrayList itemPic; //optional/separate object?
+//    private Integer quantity; //optional/separate object?
