@@ -1,89 +1,52 @@
 package com.team.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by andrewdmo on 9/30/16.
+ * Created by andrewdmo on 10/5/16.
  */
-
-
-@Entity
-@Table(name = "giftorder")
 public class Order {
 
-    @Id
-    @GeneratedValue
     private Integer id;
+    private String email;
+    private String total_price;
+    private List<LineItem> line_items = new ArrayList<>();
 
-    private String name1;
-    private String name2;
-    private String itemNum;
-    private ArrayList itemPic; //optional/separate object?
-    private Integer quantity; //optional/separate object?
-
-    //no argument constructors:
-    public Order() {
-    }
-
-    public Order(Integer id, String name1, String name2, String itemNum, ArrayList itemPic, Integer quantity) {
-        this.id = id;
-        this.name1 = name1;
-        this.name2 = name2;
-        this.itemNum = itemNum;
-        this.itemPic = itemPic;
-        this.quantity = quantity;
-
-    }
+    public Order(){}
 
     public Integer getId() {
         return id;
+    }
+
+
+    public List<LineItem> getLine_items() {
+        return line_items;
+    }
+
+    public void setLine_items(List<LineItem> line_items) {
+        this.line_items = line_items;
     }
 
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getName1() {
-        return getName1();
+    public String getEmail() {
+        return email;
     }
 
-    public void setName1(String name1) {
-        this.name1 = name1;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getName2() {
-        return name2;
+    public String getTotal_price() {
+        return total_price;
     }
 
-    public void setName2(String name2) {
-        this.name2 = name2;
-    }
-
-    public String getItemNum() {
-        return itemNum;
-    }
-
-    public void setItemNum(String itemNum) {
-        this.itemNum = itemNum;
-    }
-
-    public ArrayList getItemPic() {
-        return itemPic;
-    }
-
-    public void setItemPic(ArrayList itemPic) {
-        this.itemPic = itemPic;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+    public void setTotal_price(String total_price) {
+        this.total_price = total_price;
     }
 }
+
+

@@ -1,5 +1,6 @@
 package com.team.Controller;
 
+import com.team.Entity.Order;
 import com.team.Entity.Product;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,11 +19,13 @@ public class NotificationController {
     }
 
     @RequestMapping (path = "/notification/order/fulfillment")
-    public String orderFulfillment (){
+    public String orderFulfillment (@RequestBody Order order){
 
         return "Return me!";
 
     }
+
+
 
 
 }
